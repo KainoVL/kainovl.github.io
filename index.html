@@ -47,8 +47,7 @@
             padding: 20px;
             z-index: 1000; 
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             position: relative; 
             z-index: 1; 
@@ -60,6 +59,17 @@
            top: 10px;
            left: 10px;
             z-index: 1000; 
+        }
+        .download-button {
+            background-color: #888; 
+            color: #fff; 
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            position: fixed;
+            top: 10px;
+            right: 10px;
         }
         .main-content {
             text-align: center;
@@ -116,14 +126,16 @@
     <div class="background"></div> 
     <header>
         <img class="logo" src="Kaino.png" alt="Kaino Logo">
-        <div class="main-content">
-            <h1>Unlock Your Roblox Potential with Kaino Executor</h1>
-            <p>Elevate your Roblox experience with the latest script executor.</p>
-            <p>Gain access to unlimited resources, enhanced abilities, and exclusive features.</p>
-            <p>Kaino is the ultimate executor, operating at the highest possible level while remaining undetectable by Byfron.</p>
-        </div>
+        <button class="download-button" onclick="redirectToDownload()">Download</button>
     </header>
     
+    <div class="main-content">
+        <h1>Unlock Your Roblox Potential with Kaino Executor</h1>
+        <p>Elevate your Roblox experience with the latest script executor.</p>
+        <p>Gain access to unlimited resources, enhanced abilities, and exclusive features.</p>
+        <p>Kaino is the ultimate executor, operating at the highest possible level while remaining undetectable by Byfron.</p>
+    </div>
+
     <div class="slides">
         <div class="slide"><img src="image1.png" alt="Image 1" width="960" height="505"></div>
         <div class="slide"><img src="image2.png" alt="Image 2" width="729.5" height="330.5"></div>
@@ -151,7 +163,6 @@
                 dotsContainer.appendChild(dot);
             }
 
-            // Show current slide and mark corresponding dot
             for (let i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";  
                 document.querySelectorAll(".dot")[i].classList.remove("active");
@@ -167,6 +178,10 @@
         function goToSlide(index) {
             slideIndex = index;
             showSlides();
+        }
+
+        function redirectToDownload() {
+            window.location.href = 'https://kainoexecutor.com/download';
         }
     </script>
 </body>
