@@ -5,7 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaino</title>
     <link rel="icon" href="2.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('font.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'SecondaryFont';
+            src: url('secondaryfont.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        .background {
+            background-image: url('background-image.jpg'); 
+            background-color: #000;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        body {
+            color: #fff; 
+            margin: 0;
+            padding: 0;
+            font-family: 'CustomFont', Arial, sans-serif; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; 
+        }
+        header {
+            background-color: transparent; 
+            padding: 20px;
+            z-index: 1000; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative; 
+            z-index: 1; 
+        }
+        .logo {
+            width: 200px; 
+           height: auto;
+           position: fixed;
+           top: 10px;
+           left: 10px;
+            z-index: 1000; 
+        }
+        .main-content {
+            text-align: center;
+            margin-top: 50px; 
+            font-family: 'SecondaryFont', Arial, sans-serif; 
+            font-size: 24px; 
+        }
+        .slides {
+         position: relative; 
+          width: 100%;
+          margin-top: 20px; 
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+         align-items: center;
+         z-index: 1; 
+        }
+        .slide {
+            flex-shrink: 0;
+            overflow: hidden;
+            max-width: 100%;
+            display: none; 
+        }
+        .slide img,
+        .slide video {
+            max-width: 100%;
+            height: auto;
+            max-height: 600px; 
+        }
+        .dots {
+            position: absolute;
+            bottom: 20px; 
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000; 
+        }
+        .dot {
+            width: 12px; 
+            height: 12px; 
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .dot.active {
+            background-color: #fff;
+        }
+    </style>
 </head>
 <body>
     <div class="background"></div> 
@@ -27,6 +132,42 @@
 
     <div class="dots"></div>
 
-    <script src="script.js"></script>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            let dotsContainer = document.querySelector(".dots");
+            dotsContainer.innerHTML = ""; 
+
+            
+            for (let i = 0; i < slides.length; i++) {
+                let dot = document.createElement("span");
+                dot.classList.add("dot");
+                dot.addEventListener("click", function() {
+                    goToSlide(i);
+                });
+                dotsContainer.appendChild(dot);
+            }
+
+            // Show current slide and mark corresponding dot
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+                document.querySelectorAll(".dot")[i].classList.remove("active");
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            document.querySelectorAll(".dot")[slideIndex-1].classList.add("active");
+
+            setTimeout(showSlides, 10000); 
+        }
+
+        function goToSlide(index) {
+            slideIndex = index;
+            showSlides();
+        }
+    </script>
 </body>
 </html>
