@@ -58,7 +58,7 @@
             right: 10px;
             z-index: 1000;
         }
-        .button-container a {
+        .button-container button {
             background-color: #888; 
             color: #fff; 
             border: none;
@@ -110,8 +110,8 @@
     <header>
         <img class="logo" src="Kaino.png" alt="Kaino Logo">
         <div class="button-container">
-            <a href="https://kainoexecutor.com/download" target="_blank">Download</a>
-            <a href="https://kainoexecutor.com/" target="_blank">Go to main site</a>
+            <button onclick="redirectToDownload()">Download</button>
+            <button onclick="redirectToMainSite()">Go to main site</button>
         </div>
     </header>
     
@@ -156,5 +156,15 @@
             <p class="description">Retarded.</p>
         </div>
     </div>
+
+    <script>
+        function redirectToDownload() {
+            window.location.href = 'https://kainoexecutor.com/download';
+        }
+
+        function redirectToMainSite() {
+            window.location.href = 'https://kainoexecutor.com/';
+        }
+    </script>
 </body>
 </html>
