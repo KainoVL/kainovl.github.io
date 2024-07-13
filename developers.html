@@ -3,192 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaino - The Developers</title>
-    <link rel="icon" href="2.png" type="image/png">
-    <style>
-        @font-face {
-            font-family: 'CustomFont';
-            src: url('font.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'SecondaryFont';
-            src: url('secondaryfont.otf') format('opentype');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        .background {
-            background-image: url('background-image.jpg'); 
-            background-color: #000;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-        header {
-            background-color: transparent; 
-            padding: 20px;
-            z-index: 1000; 
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative; 
-            z-index: 1; 
-        }
-        .logo {
-            width: 200px; 
-            height: auto;
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            z-index: 1000; 
-        }
-        .button-container {
-            margin-top: 10px;
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            z-index: 1000;
-        }
-        .button-container button {
-            background-color: #888; 
-            color: #fff; 
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-right: 10px;
-            text-decoration: none; 
-        }
-        .about-text {
-            color: #fff;
-            font-family: 'CustomFont', Arial, sans-serif; 
-            font-size: 36px;
-            position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            text-align: center;
-            z-index: 1000;
-        }
-        .image-container, .second-row {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 100px;
-            margin-left: 20px;
-        }
-        .image-container img, .second-row img {
-            width: 200px; 
-            height: auto;
-        }
-        .image-container p, .second-row p {
-            color: #fff;
-            font-family: 'CustomFont', Arial, sans-serif; 
-            font-size: 18px;
-            text-align: center;
-        }
-        .image-container p.description, .second-row p.description {
-            font-family: 'SecondaryFont', Arial, sans-serif; 
-        }
-        .discord-id {
-            font-family: 'SecondaryFont', Arial, sans-serif; 
-            font-size: 16px;
-            color: #fff;
-        }
-    </style>
+    <title>Kaino Executor - Developers</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/2.png" type="image/png">
 </head>
 <body>
-    <div class="background"></div> 
+    <div class="background"></div>
     <header>
-        <img class="logo" src="Kaino.png" alt="Kaino Logo">
-        <div class="button-container">
-            <button onclick="redirectToDownload()">Download</button>
-            <button onclick="redirectToMainSite()">Go to main site</button>
-        </div>
+        <nav>
+            <img src="images/Kaino.png" alt="Kaino Logo" class="logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="developers.html">Developers</a></li>
+                <li><a href="download.html">Download</a></li>
+            </ul>
+        </nav>
     </header>
-    
-    <div class="about-text">
-        <p>The Developers</p>
-    </div>
 
-    <div class="image-container">
-        <div>
-            <a href="https://discordapp.com/users/334467683896524800" target="_blank">
-                <img src="jazzie.png" alt="Jazzie">
-            </a>
-            <p>Jazzie</p>
-            <p class="description">Lead Developer and Owner</p>
-        </div>
-        <div>
-            <a href="https://discordapp.com/users/411209081735610368" target="_blank">
-                <img src="ienctax.png" alt="IEnctaX">
-            </a>
-            <p>IEnctaX</p>
-            <p class="description">Bypass Developer :3</p>
-        </div>
-        <div>
-            <a href="https://discordapp.com/users/1014984974065205290" target="_blank">
-                <img src="anilsaa.png" alt="anilsa">
-            </a>
-            <p>anilsa</p>
-            <p class="description">Security and Decompiling</p>
-        </div>
-        <div>
-            <a href="https://discordapp.com/users/820097544901230603" target="_blank">
-                <img src="marvaa.png" alt="_marvaa">
-            </a>
-            <p>_marvaa</p>
-            <p class="description">Slave working on Multi Inject</p>
-        </div>
-        <div>
-            <a href="https://discordapp.com/users/696398306430943272" target="_blank">
-                <img src="danmark3110.png" alt="danmark3110">
-            </a>
-            <p>danmark3110</p>
-            <p class="description">Retarded.</p>
-        </div>
-    </div>
+    <main>
+        <section class="developers">
+            <h1>The Developers</h1>
+            <div class="dev-grid">
+                <div class="dev-card">
+                    <a href="https://discordapp.com/users/334467683896524800" target="_blank">
+                        <img src="images/jazzie.png" alt="Jazzie">
+                    </a>
+                    <h3>Jazzie</h3>
+                    <p>Lead Developer and Owner</p>
+                </div>
+                <div class="dev-card">
+                    <a href="https://discordapp.com/users/411209081735610368" target="_blank">
+                        <img src="images/ienctax.png" alt="IEnctaX">
+                    </a>
+                    <h3>IEnctaX</h3>
+                    <p>Bypass Developer :3</p>
+                </div>
+                <div class="dev-card">
+                    <a href="https://discordapp.com/users/1014984974065205290" target="_blank">
+                        <img src="images/anilsaa.png" alt="anilsa">
+                    </a>
+                    <h3>anilsa</h3>
+                    <p>Security and Decompiling</p>
+                </div>
+                <div class="dev-card">
+                    <a href="https://discordapp.com/users/820097544901230603" target="_blank">
+                        <img src="images/marvaa.png" alt="_marvaa">
+                    </a>
+                    <h3>_marvaa</h3>
+                    <p>Slave working on Multi Inject</p>
+                </div>
+                <div class="dev-card">
+                    <a href="https://discordapp.com/users/696398306430943272" target="_blank">
+                        <img src="images/danmark3110.png" alt="danmark3110">
+                    </a>
+                    <h3>danmark3110</h3>
+                    <p>Retarded.</p>
+                </div>
+                <div class="dev-card">
+                    <a href="https://discordapp.com/users/1041361197355761795" target="_blank">
+                        <img src="images/xiel.png" alt="Xiel">
+                    </a>
+                    <h3>Xiel</h3>
+                    <p>What does he do again?</p>
+                </div>
+                <div class="dev-card">
+                    <a href="https://discordapp.com/users/994113604821471305" target="_blank">
+                        <img src="images/crybo.png" alt="Crybo">
+                    </a>
+                    <h3>Crybo</h3>
+                    <p>Bypass :l</p>
+                </div>
+                <div class="dev-card">
+                    <a href="https://discordapp.com/users/888593412465500240" target="_blank">
+                        <img src="images/bloicv.png" alt="bloi">
+                    </a>
+                    <h3>bloi</h3>
+                    <p>Slave 2</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <div class="image-container">
-        <div>
-            <a href="https://discordapp.com/users/1041361197355761795" target="_blank">
-                <img src="xiel.png" alt="xiel">
-            </a>
-            <p>Xiel</p>
-            <p class="description">What does he do again?</p>
-        </div>
-        <div>
-            <a href="https://discordapp.com/users/994113604821471305" target="_blank">
-                <img src="crybo.png" alt="monkey">
-            </a>
-            <p>Crybo</p>
-            <p class="description">Bypass :l</p>
-        </div>
-        <div>
-            <a href="https://discordapp.com/users/888593412465500240" target="_blank">
-                <img src="bloicv.png" alt="bloi">
-            </a>
-            <p>bloi</p>
-            <p class="description">Slave 2</p>
-        </div>
-    </div>
+    <footer>
+        <p>&copy; 2024 Kaino Executor. All rights reserved.</p>
+    </footer>
 
-    <script>
-        function redirectToDownload() {
-            window.location.href = 'https://kainoexecutor.com/download';
-        }
-
-        function redirectToMainSite() {
-            window.location.href = 'https://kainoexecutor.com/';
-        }
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>

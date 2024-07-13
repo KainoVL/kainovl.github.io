@@ -3,205 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaino</title>
-    <link rel="icon" href="2.png" type="image/png">
-    <style>
-        @font-face {
-            font-family: 'CustomFont';
-            src: url('font.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-        }
-        @font-face {
-            font-family: 'SecondaryFont';
-            src: url('secondaryfont.otf') format('opentype');
-            font-weight: normal;
-            font-style: normal;
-        }
-        .background {
-            background-image: url('background-image.jpg'); 
-            background-color: #000;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-        body {
-            color: #fff; 
-            margin: 0;
-            padding: 0;
-            font-family: 'CustomFont', Arial, sans-serif; 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh; 
-        }
-        header {
-            background-color: transparent; 
-            padding: 20px;
-            z-index: 1000; 
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative; 
-            z-index: 1; 
-        }
-        .logo {
-            width: 200px; 
-           height: auto;
-           position: fixed;
-           top: 10px;
-           left: 10px;
-            z-index: 1000; 
-        }
-        .download-button {
-            background-color: #888; 
-            color: #fff; 
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            margin-left: -110px; 
-        }
-        .developers-button {
-            background-color: #888; 
-            color: #fff; 
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            position: fixed;
-            top: 10px;
-            right: 140px; 
-        }
-        .main-content {
-            text-align: center;
-            margin-top: 50px; 
-            font-family: 'SecondaryFont', Arial, sans-serif; 
-            font-size: 24px; 
-        }
-        .slides {
-         position: relative; 
-          width: 100%;
-          margin-top: 20px; 
-          overflow: hidden;
-          display: flex;
-          justify-content: center;
-         align-items: center;
-         z-index: 1; 
-        }
-        .slide {
-            flex-shrink: 0;
-            overflow: hidden;
-            max-width: 100%;
-            display: none; 
-        }
-        .slide img,
-        .slide video {
-            max-width: 100%;
-            height: auto;
-            max-height: 600px; 
-        }
-        .dots {
-            position: absolute;
-            bottom: 20px; 
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000; 
-        }
-        .dot {
-            width: 12px; 
-            height: 12px; 
-            background-color: rgba(255, 255, 255, 0.5);
-            border-radius: 50%;
-            margin: 0 5px;
-            cursor: pointer;
-        }
-        .dot.active {
-            background-color: #fff;
-        }
-    </style>
+    <title>Kaino Executor</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="background"></div> 
+    <div class="background"></div>
     <header>
-        <button class="developers-button" onclick="redirectToDevelopers()">Developers</button>
-        <img class="logo" src="Kaino.png" alt="Kaino Logo">
-        <button class="download-button" onclick="redirectToDownload()">Download</button>
+        <nav>
+            <img src="images/Kaino.png" alt="Kaino Logo" class="logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="developers.html">Developers</a></li>
+                <li><a href="download.html">Download</a></li>
+            </ul>
+        </nav>
     </header>
-    
-    <div class="main-content">
-        <h1>Unlock Your Full Potential with Kaino Executor</h1>
-        <p>Elevate your Roblox experience with the latest PC script executor.</p>
-        <p>Gain access to unlimited resources, enhanced abilities, and exclusive features.</p>
-        <p>Kaino is the ultimate executor, operating at the highest possible level while remaining undetectable by Byfron.</p>
-    </div>
 
-    <div class="slides">
-        <div class="slide"><img src="image1.png" alt="Image 1" width="960" height="505"></div>
-        <div class="slide"><img src="image2.png" alt="Image 2" width="729.5" height="330.5"></div>
-        <div class="slide"><img src="image3.png" alt="Image 3" width="729.5" height="330.5"></div>
-        <div class="slide"><img src="image4.png" alt="Image 1" width="960" height="505"></div>
-        <div class="slide"><img src="savegames.gif" alt="Animated GIF" width="800" height="450"></div>
-    </div>
-
-    <div class="dots"></div>
-
-    <script>
-        let slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-            let slides = document.getElementsByClassName("slide");
-            let dotsContainer = document.querySelector(".dots");
-            dotsContainer.innerHTML = ""; 
-
+    <main>
+        <section class="hero">
+            <h1>Unlock Your Full Potential with Kaino Executor</h1>
+            <p>Elevate your Roblox experience with the latest PC script executor.</p>
             
-            for (let i = 0; i < slides.length; i++) {
-                let dot = document.createElement("span");
-                dot.classList.add("dot");
-                dot.addEventListener("click", function() {
-                    goToSlide(i);
-                });
-                dotsContainer.appendChild(dot);
-            }
+            
+            <div class="key-features">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>Unlimited Potential</li>
+                    <li>Enhanced abilities</li>
+                    <li>Exclusive features</li>
+                    <li>Undetectable by Byfron</li>
+                </ul>
+            </div>
+            
+            <a href="download.html" class="cta-button">Download Now</a>
+        </section>
 
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-                document.querySelectorAll(".dot")[i].classList.remove("active");
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}    
-            slides[slideIndex-1].style.display = "block";  
-            document.querySelectorAll(".dot")[slideIndex-1].classList.add("active");
+        <section class="image-gallery">
+            <h2>Gallery</h2>
+            <div class="image-grid">
+                <div class="image-card">
+                    <img src="images/image1.png" alt="Screenshot 1" onclick="openFullImage(this, 0)">
+                </div>
+                <div class="image-card">
+                    <img src="images/image2.png" alt="Screenshot 2" onclick="openFullImage(this, 1)">
+                </div>
+                <div class="image-card">
+                    <img src="images/image3.png" alt="Screenshot 3" onclick="openFullImage(this, 2)">
+                </div>
+                <div class="image-card">
+                    <img src="images/image4.png" alt="Screenshot 4" onclick="openFullImage(this, 3)">
+                </div>
+                <div class="image-card">
+                    <img src="images/savegames.gif" alt="Save Games" onclick="openFullImage(this, 4)">
+                </div>
+            </div>
+        </section>
+    </main>
 
-            setTimeout(showSlides, 10000); 
-        }
+    <div id="fullImageOverlay" class="full-image-overlay">
+        <span class="close-btn" onclick="closeFullImage()">&times;</span>
+        <img id="fullImage" src="" alt="Full size image">
+        <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+        <a class="next" onclick="changeImage(1)">&#10095;</a>
+    </div>
 
-        function goToSlide(index) {
-            slideIndex = index;
-            showSlides();
-        }
+    <footer>
+        <p>&copy; 2024 Kaino Executor. All rights reserved.</p>
+    </footer>
 
-        function redirectToDownload() {
-            window.location.href = 'https://kainoexecutor.com/download';
-        }
-
-        function redirectToDevelopers() {
-            window.location.href = 'https://kainoexecutor.com/developers';
-        }
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
