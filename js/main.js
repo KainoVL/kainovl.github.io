@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Existing code can be removed as we're no longer using a slider
 });
 
 let currentImageIndex = 0;
@@ -31,7 +30,6 @@ function changeImage(direction) {
     fullImage.src = images[currentImageIndex].src;
 }
 
-// Close the full image view when clicking outside the image
 document.getElementById('fullImageOverlay').addEventListener('click', (e) => {
     if (e.target.id === 'fullImageOverlay') {
         closeFullImage();
