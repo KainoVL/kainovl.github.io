@@ -4,25 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaino - Developers</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="images/2.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 <body>
-    <div class="background"></div>
-    <header>
-        <nav>
-            <img src="images/Kaino.png" alt="Kaino Logo" class="logo">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="developers.html">Developers</a></li>
-                <li><a href="download.html">Download</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="container">
+        <div class="content">
+            <nav>
+                <a href="home">
+                    <img src="images/Kaino.png" alt="Kaino Logo" class="logo">
+                  </a>
+                <ul>
+                    <li><a href="home" class="active">Home</a></li>
+                    <li><a href="developers">Developers</a></li>
+                    <li><a href="download">Download</a></li>
+                </ul>
+            </nav>
 
-    <main>
-        <section class="developers">
-            <h1>The Developers</h1>
+            <h1 class="title">The Developers</h1>
+
             <div class="dev-grid">
                 <div class="dev-card">
                     <a href="https://discordapp.com/users/334467683896524800" target="_blank">
@@ -81,13 +81,9 @@
                     <p>Slave 2</p>
                 </div>
             </div>
-        </section>
-    </main>
 
-    <footer>
-        <p>&copy; 2024 Kaino Executor. All rights reserved.</p>
-    </footer>
-
-    <script src="js/main.js"></script>
+            <p class="footer-text">© 2024 Kaino. All rights reserved.</p>
+        </div>
+    </div>
 </body>
 </html>
