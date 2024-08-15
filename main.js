@@ -36,7 +36,6 @@ document.getElementById('fullImageOverlay').addEventListener('click', (e) => {
     }
 });
 
-// Add keyboard navigation
 document.addEventListener('keydown', (e) => {
     if (document.getElementById('fullImageOverlay').style.display === 'flex') {
         if (e.key === 'ArrowLeft') {
