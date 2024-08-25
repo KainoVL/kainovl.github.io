@@ -3,22 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaino</title>
+    <title>Kaino Executor - Unlock Your Full Potential</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="images/logo.png" type="image/png">
-    <meta property="og:title" content="Kaino Executor">
-    <meta property="og:description" content="Unlock your full potential with Kaino, the latest PC script executor for Roblox.">
-    <meta property="og:image" content="https://kainoexecutor.com/images/logo.png">
-    <meta property="og:url" content="https://kainoexecutor.com/home">
-    <meta name="theme-color" content="#FE232D">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="main.js" defer></script>
 </head>
 <body>
     <div class="container">
         <div class="content">
             <nav>
-                <a href="home">
+                <a href="home" class="logo-link">
                     <img src="images/Kaino.png" alt="Kaino Logo" class="logo">
-                  </a>
+                </a>
                 <ul>
                     <li><a href="home" class="active">Home</a></li>
                     <li><a href="developers">Developers</a></li>
@@ -27,12 +23,12 @@
                 </ul>
             </nav>
 
-            
-            <p>Unlock Your Full Potential with Kaino Executor</p>
-            
-            <p>Elevate your Roblox experience with the latest PC script executor.</p>
+            <header>
+                <h1 class="title">Unlock Your Full Potential with Kaino Executor</h1>
+                <p class="subtitle">Elevate your Roblox experience with the latest PC script executor.</p>
+            </header>
 
-            <div class="key-features">
+            <section class="key-features">
                 <h2>Key Features</h2>
                 <ul>
                     <li>Level 7 Execution</li>
@@ -40,37 +36,39 @@
                     <li>0 Vulnerabilities</li>
                     <li>Undetectable by Hyperion</li>
                 </ul>
-            </div>
+            </section>
 
             <a href="download" class="cta-button">Download Now</a>
 
-            <h2>Gallery</h2>
-            <div class="image-gallery">
-                <div class="image-card">
-                    <img src="images/image1.png" alt="ss1" onclick="openFullImage(this, 0)">
+            <section class="gallery">
+                <h2>Gallery</h2>
+                <div class="image-gallery">
+                    <div class="image-card">
+                        <img src="images/image1.png" alt="Screenshot 1" onclick="openFullImage(this, 0)">
+                    </div>
+                    <div class="image-card">
+                        <img src="images/image2.png" alt="Screenshot 2" onclick="openFullImage(this, 1)">
+                    </div>
+                    <div class="image-card">
+                        <img src="images/image3.png" alt="Screenshot 3" onclick="openFullImage(this, 2)">
+                    </div>
+                    <div class="image-card">
+                        <img src="images/savegames.gif" alt="Save Instance" onclick="openFullImage(this, 3)">
+                    </div>
                 </div>
-                <div class="image-card">
-                    <img src="images/image2.png" alt="ss2" onclick="openFullImage(this, 1)">
-                </div>
-                <div class="image-card">
-                    <img src="images/image3.png" alt="ss3" onclick="openFullImage(this, 2)">
-                </div>
-                <div class="image-card">
-                    <img src="images/savegames.gif" alt="saveinstance" onclick="openFullImage(this, 2)">
-                </div>
-            </div>
+            </section>
 
-            <p class="footer-text">© 2024 Kaino. All rights reserved.</p>
+            <footer>
+                <p>&copy; 2024 Kaino. All rights reserved.</p>
+            </footer>
         </div>
     </div>
 
     <div id="fullImageOverlay" class="full-image-overlay">
-        <span class="close-btn" onclick="closeFullImage()">×</span>
+        <span class="close-btn" onclick="closeFullImage()">&times;</span>
         <img id="fullImage" src="" alt="Full size image">
-        <span class="prev" onclick="changeImage(-1)">❮</span>
-        <span class="next" onclick="changeImage(1)">❯</span>
+        <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+        <span class="next" onclick="changeImage(1)">&#10095;</span>
     </div>
-
-    <script src="main.js"></script>
 </body>
 </html>
