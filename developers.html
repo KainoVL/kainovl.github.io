@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaino Executor - Developers</title>
+    <title>Hyperion Executor - The Developers</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="main.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <link rel="icon" href="https://kainoexecutor.com/images/logo.png" type="image/png">
 </head>
 <body>
     <div class="container">
         <div class="content">
             <nav>
-                <a href="home" class="logo-link">
-                    <img src="images/Kaino.png" alt="Kaino Logo" class="logo">
-                </a>
+                <a href="home" class="logo-link"><img src="images/Hyperion.png" alt="Hyperion Logo" class="logo"></a>
                 <ul>
                     <li><a href="home">Home</a></li>
                     <li><a href="developers" class="active">Developers</a></li>
@@ -24,9 +22,7 @@
                 </ul>
             </nav>
 
-            <header>
-                <h1 class="title">The Developers</h1>
-            </header>
+            <h1 class="title">The Developers</h1>
 
             <section class="dev-grid">
                 <div class="dev-card" data-dev-id="jazzie">
@@ -57,14 +53,14 @@
             </section>
 
             <footer>
-                <p>&copy; 2024 Kaino. All rights reserved.</p>
+                © 2024 Hyperion. All rights reserved.
             </footer>
         </div>
     </div>
 
     <div id="devModal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
+            <span class="close">×</span>
             <img id="devModalImage" src="" alt="Developer">
             <h2 id="devModalName"></h2>
             <p id="devModalRole"></p>
@@ -72,5 +68,7 @@
             <div id="devModalLinks"></div>
         </div>
     </div>
+
+    <script src="main.js"></script>
 </body>
 </html>
